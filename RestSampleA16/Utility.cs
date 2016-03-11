@@ -96,11 +96,10 @@ namespace RestSampleA16
                 return "";
             }
         }
-        public static void PutJsonInRavenDB(string documentCode, string json)
+        public static void PutJsonInRavenDB(string documentCode, string json, string entityName)
         {
             string databaseName = "A16Documents";
             string docId = documentCode;
-            string entityName = "Documents";
             var url = string.Format(ConfigurationManager.AppSettings["RavenDBUrl"], databaseName, docId);
             var webRequest = System.Net.HttpWebRequest.CreateHttp(url);
             webRequest.Method = "PUT";
