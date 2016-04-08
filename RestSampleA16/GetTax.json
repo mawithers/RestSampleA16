@@ -1,0 +1,38 @@
+﻿{
+  "header": {
+    "accountId": "223996f6353b4a5eb4c7855123050ba3",
+    "companyCode": "PIXELSKY",
+    "accountEntityCode": "PIXELSKY",
+    "documentCode": "1234567890-86",
+    "transactionType": "Sale",
+    "customerCode": "Test",
+    "transactionDate": "2016-04-7",
+    "purchaseOrderNumber": "32323",
+    "companyLocation": "HQ",
+    "defaultLocations": {
+      "POS": {
+        "address": {
+          "line1": "3734 Ross Rd",
+          "city": "Brunswick",
+          "state": "GA",
+          "country": "USA",
+          "zipcode": "31520"
+        }
+      }
+    }
+  },
+  "lines": [
+    {
+      "lineCode": "1",
+      "avalaraGoodsAndServicesType": "LDG000001",
+      "NumberOfNights": 7,
+      "lineAmount": 1000,
+      "itemDescription": "One night lodging",
+      "taxIncluded": "false",
+      "metadata": {
+        "Ref1": "ABC",
+        "Ref2": "DEF"
+      }
+    }
+  ]
+}

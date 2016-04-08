@@ -18,24 +18,15 @@ namespace RestSampleA16
     {
         static void Main(string[] args)
         {
-
-
             try
             {
-                string requestDetail = File.ReadAllText(ConfigurationManager.AppSettings["InputFile"]);
+                Console.WriteLine("...Processing Started...");
 
-                string details = Utility.PostJson(ConfigurationManager.AppSettings["Url"], requestDetail);
- 
-                string myDocumentCode = Utility.GetDocumentCode(details.ToString()); 
+                GeneralTests.RunGeneralTests();
 
-                //File.WriteAllText(myDocumentCode + DateTime.Now.ToString("yyyyMMddHHmmssfff") + ".txt", details.ToString());
+                // Console.WriteLine(GrouponTests.FloridaTests(File.ReadAllText(ConfigurationManager.AppSettings["InputFile"]), "Florida")); 
 
-                Utility.PutJsonInRavenDB("In-" + myDocumentCode, requestDetail , "myRequests");
-
-                Utility.PutJsonInRavenDB("Out-" + myDocumentCode, details.ToString(), "myResponses");
-
-                Console.Write(details.ToString());
-
+                Console.WriteLine("...Processing Complete...");
             }
 
             catch (Exception e)
@@ -48,12 +39,6 @@ namespace RestSampleA16
             {
                 Console.ReadKey();
             }
-
-
-
         }
-
-
     }
-
 }
