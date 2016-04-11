@@ -7,8 +7,8 @@ Run this console App project locally in Visual Studio 2015
 If you have any questions or suggestions, please contact mark.withers@avalara.com
 
 Dependency:
--RavenDB running on localhost.
--NewtonSoft.JSON parser.
+-RavenDB running on localhost ( https://ravendb.net/docs/article-page/3.0/csharp/start/getting-started ).
+-NewtonSoft.JSON parser ( http://www.newtonsoft.com/json ).
 -VS 2015.
 -Excel.
 
