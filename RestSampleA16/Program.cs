@@ -24,7 +24,7 @@ namespace RestSampleA16
 
                 GeneralTests.RunGeneralTests();
 
-                // Console.WriteLine(GrouponTests.FloridaTests(File.ReadAllText(ConfigurationManager.AppSettings["InputFile"]), "Florida")); 
+                //Console.WriteLine(GrouponTests.FloridaTests(File.ReadAllText(ConfigurationManager.AppSettings["InputFile"]), "Florida")); 
 
                 Console.WriteLine("...Processing Complete...");
             }

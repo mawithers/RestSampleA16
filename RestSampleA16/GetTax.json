@@ -1,9 +1,8 @@
 ﻿{
   "header": {
-    "accountId": "223996f6353b4a5eb4c7855123050ba3",
-    "companyCode": "PIXELSKY",
-    "accountEntityCode": "PIXELSKY",
-    "documentCode": "1234567890-86",
+    "accountId": "7ccc60544513422aaf25909281b704a0",
+    "companyCode": "HardwareWorld",
+    "documentCode": "1234567890-92",
     "transactionType": "Sale",
     "customerCode": "Test",
     "transactionDate": "2016-04-7",
@@ -23,7 +22,8 @@
   },
   "lines": [
     {
-      "lineCode": "1",
+      "randomAttribute":  "Stuff",
+      "lineCode": "192928288288288200220",
       "avalaraGoodsAndServicesType": "LDG000001",
       "NumberOfNights": 7,
       "lineAmount": 1000,
@@ -31,7 +31,8 @@
       "taxIncluded": "false",
       "metadata": {
         "Ref1": "ABC",
-        "Ref2": "DEF"
+        "Ref2": "DEF",
+        "MyStuff": "Stuff"
       }
     }
   ]
