@@ -124,8 +124,15 @@ namespace RestSampleA16
                 string result = null;
                 using (HttpWebResponse resp = req.GetResponse()
                                               as HttpWebResponse)
-           
-            Console.Write(result);
+
+
+            {
+                StreamReader reader =
+                    new StreamReader(resp.GetResponseStream());
+                result = reader.ReadToEnd();
+            }
+
+            Console.Write(result.ToString());
         }
 
         public static void PutJsonInRavenDB(string documentCode, string json, string entityName)
@@ -183,8 +190,6 @@ namespace RestSampleA16
 
             defaultLocations mydefaultLocations = new defaultLocations();
             mydefaultLocations.POS = taxAddress;
-           // mydefaultLocations.ShipFrom = taxAddress;
-
             myHeader.defaultLocations = mydefaultLocations;
 
             myTaxRequest.header = myHeader;
@@ -192,7 +197,7 @@ namespace RestSampleA16
 
             //Console.Write(Newtonsoft.Json.JsonConvert.SerializeObject(myTaxRequest));
 
-            return Newtonsoft.Json.JsonConvert.SerializeObject(myTaxRequest);
+            return Newtonsoft.Json.JsonConvert.SerializeObject(myTaxRequest);   
 
         }
 
@@ -275,12 +280,12 @@ namespace RestSampleA16
                 return CreateWebRequest(url, body);
            
         }
-    public static string UnVoid(string documentCode)
+    public static string UnVoid(string url, string body)
         {
 
-            return documentCode;
+            return CreateWebRequest(url, body);
 
-         }
+        }
 
 
 public static string GetCustomerCode(string json)
