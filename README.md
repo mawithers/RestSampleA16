@@ -12,13 +12,13 @@ Dependency:
 - VS 2015.
 - Excel.
 
-Here  what it currently does:
+Here is what the App currently does:
 - Records, Voids and Unvoids Transactions.
-- Process a spreadsheet of Address data. 
+- Process a spreadsheet of Address data to test Lodging Tax. 
 - Retrieve a list of Companies.
 - Saves Input and Output JSON in RavenDB.
 
-In a future version, it will also test for:
+In a future version, the App will also test for:
 - Exercise all the methods in the AvaTax 16 API.
 - Exercise all the methods in the CertCapture API.
 - Exercise all the methods in the Business Communications API.
