@@ -58,11 +58,12 @@ namespace RestSampleA16
 
         public static string RecordTest(string request, string ravenDocument)
         {
-            string response = Utility.GetTax(ConfigurationManager.AppSettings["Url"], request);
-
-            string myDocumentCode = Utility.GetDocumentCode(response.ToString());
+            string myDocumentCode = Utility.GetDocumentCode(request.ToString());
 
             Utility.PutJsonInRavenDB("In-" + myDocumentCode, request, "myRequests" + ravenDocument);
+
+            string response = Utility.GetTax(ConfigurationManager.AppSettings["Url"], request);
+            
             Utility.PutJsonInRavenDB("Out-" + myDocumentCode, response.ToString(), "myResponses" + ravenDocument);
 
             Console.WriteLine(response);
