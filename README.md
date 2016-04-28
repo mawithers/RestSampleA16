@@ -19,6 +19,7 @@ Here is what the App currently does:
 - Saves Input and Output JSON in RavenDB.
 
 In a future version, the App will:
+- Exercise all the methods in the AvaTax 15 REST API.
 - Exercise all the methods in the AvaTax 16 API.
 - Exercise all the methods in the CertCapture API.
 - Exercise all the methods in the Business Communications API.
